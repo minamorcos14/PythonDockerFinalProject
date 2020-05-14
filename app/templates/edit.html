@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/edit/{{taxi.id}}" method="post">
+    <div class="row">
+        <div class="col">
+            <label for="distance_miles">Distance</label>
+            <input id="distance_miles" type="text" class="form-control" placeholder="Distance" name="distance_miles" value="{{taxi.distance_miles}}">
+        </div>
+        <div class="col">
+            <label for="fare">Fare</label>
+            <input id="fare" type="text" class="form-control" placeholder="fare"
+                   name="fare" value="{{taxi.fare}}">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+
+</form>
+{% endblock %}

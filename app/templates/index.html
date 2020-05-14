@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Distance (Miles)</th>
+        <th scope="col">Fare ($)</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for taxi in taxis %}
+    <tr>
+        <td><a href="view/{{taxi.id}}">{{ taxi.distance_miles }}</a></td>
+        <td>{{ taxi.fare }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
